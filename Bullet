@@ -1,0 +1,28 @@
+class Bullet extends Floater {
+  public Bullet(Spaceship ship) {
+    myColor = 255;
+    myCenterX = ship.myCenterX;
+    myCenterY = ship.myCenterY;
+    myPointDirection = ship.myPointDirection;
+    myXspeed = ship.myXspeed;
+    myYspeed = ship.myYspeed;
+    accelerate(6);
+  }
+  
+  public void move() {
+    myCenterX += myXspeed;
+    myCenterY += myYspeed;
+  }
+  
+  public void show() {
+    ellipse((float)myCenterX,(float)myCenterY,(float)5,(float)5);
+    fill(myColor);
+  }
+  
+  public double getMyBulletCenterX() {
+    return myCenterX;
+  }
+  public double getMyBulletCenterY() {
+    return myCenterY;
+  }
+}
