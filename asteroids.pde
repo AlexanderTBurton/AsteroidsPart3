@@ -43,7 +43,7 @@ void draw() {
         bullets.remove(j);
         j--;
       }
-      else if(d2 <= 100) {
+      else if(d2 <= 30) {
       anAsteroid.remove(i);
       i--;
       bullets.remove(j);
