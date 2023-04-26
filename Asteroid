@@ -1,0 +1,47 @@
+class Asteroid extends Floater {
+  double rotSpeed;
+  public Asteroid() {
+    rotSpeed = (Math.random()-0.5)*10;
+    myCenterX = (int)Math.random()*width;
+    myCenterY = (int)Math.random()*height;
+    myXspeed = (Math.random()-0.5)*5;
+    myYspeed = (Math.random()-0.5)*5;
+    myColor = 255;
+    corners = 6;
+    xCorners = new int[corners];
+    yCorners = new int[corners];
+    xCorners[0] = -15 + ((int)((Math.random()-0.5)*10));
+    yCorners[0] = 15 + ((int)((Math.random()-0.5)*10));
+    xCorners[1] = -15 + ((int)((Math.random()-0.5)*10));
+    yCorners[1] = 0 + ((int)((Math.random()-0.5)*10));
+    xCorners[2] = -15 + ((int)((Math.random()-0.5)*10));
+    yCorners[2] = -15 + ((int)((Math.random()-0.5)*10));
+    xCorners[3] = 15 + ((int)((Math.random()-0.5)*10));
+    yCorners[3] = -15 + ((int)((Math.random()-0.5)*10));
+    xCorners[4] = 15 + ((int)((Math.random()-0.5)*10));
+    yCorners[4] = 0 + ((int)((Math.random()-0.5)*10));
+    xCorners[5] = 15 + ((int)((Math.random()-0.5)*10));
+    yCorners[5] = 15 + ((int)((Math.random()-0.5)*10));
+  }
+  
+  void move() {
+    turn(rotSpeed);
+    super.move();
+  }
+  
+  public double getMyAsteroidCenterX() {
+    return myCenterX;
+  }
+  public double getMyAsteroidCenterY() {
+    return myCenterY;
+  }
+    
+  void setMyCenterX(int myCenterX_) {
+    myCenterX = myCenterX_;
+  }
+  void setMyCenterY(int myCenterY_) {
+    myCenterY = myCenterY_;
+  }
+  
+  
+}
